@@ -1,0 +1,19 @@
+####################################### Services
+services:
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor
+    container_name: core-cadvisor-c
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - network-core
+    # restart: always
+    # env_file:
+    #   - ./.env
+    ports:
+      - "8080:8080"
+
+####################################### Networks
+networks:
+  network-core:
+    external: true
