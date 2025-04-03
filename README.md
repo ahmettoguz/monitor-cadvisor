@@ -1,4 +1,4 @@
-<h1 id="top" align="center">Core Grafana</h1>
+<h1 id="top" align="center">Monitor cAdvisor</h1>
 
 <br>
 
