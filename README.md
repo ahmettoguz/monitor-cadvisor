@@ -92,6 +92,8 @@ docker logs -f                          monitor-cadvisor-c
 
 - Refer to [`Grafana`](https://github.com/ahmettoguz/monitor-grafana) repository to integrate grafana to visualize node exporter data.
 
+- Refer to [`Traefik`](https://github.com/ahmettoguz/core-traefik) repository to expose traefik metrics and also launch reverse proxy.
+
 <br/>
 
 <h2 id="contributors">👥 Contributors</h2>
