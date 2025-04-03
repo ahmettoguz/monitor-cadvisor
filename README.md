@@ -22,7 +22,7 @@
 
 <h2 id="intro">📌 About Project</h2>
 
-This project simplifies the deployment of Grafana with a fully pre-configured setup. It includes persistent data storage, automated dashboard and datasource provisioning, predefined admin credentials, and email alert support, all easily managed through Docker Compose.
+Container Advisor (cAdvisor) is a tool designed to provide insights into containerized applications. This project enables easy deployment of cAdvisor, allowing seamless integration with Prometheus and Grafana for container monitoring.
 
 <br/>
 
@@ -38,65 +38,52 @@ This project simplifies the deployment of Grafana with a fully pre-configured se
 
 &nbsp; [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
 
-&nbsp; [![Grafana](https://img.shields.io/badge/Grafana-F2F4F9?style=for-the-badge&logo=grafana&logoColor=orange&labelColor=F2F4F9)](https://grafana.com)
+&nbsp; [![cAdvisor](https://img.shields.io/badge/cadvisor-black?style=for-the-badge&logo=tripadvisor&logoColor=gray)](https://grafana.com)
 
 <br/>
 
 <h2 id="features">🔥 Features</h2>
 
-- **Docker Containerization:** The application is containerized using Docker to ensure consistent deployment, scalability, and isolation across different environments.
-- **Persistent Data:** Utilizes bind mounts to persist data on the host machine, preventing data loss during container restarts.
 - **Docker Compose Deployment:** Simplifies deployment with Docker Compose configuration, enabling easy setup and service orchestration without complex commands.
-- **Prometheus Integration:** Seamlessly integrates with Prometheus to visualize real-time monitoring data.
-- **Dashboard & Datasource Provisioning:** Comes with a prepared JSON dashboard and predefined data sources, automatically loaded using provisioning files.
-- **Email Alerts Support:** Configure email alerts via `.env` file for monitoring important system metrics.
-- **Predefined Admin Credentials:** Allows the use of a predefined admin password stored in a `.env` file.
+- **Network Setup:** Integrates Node-Exporter with other metric tools with other networks.
 
 <br/>
 
 <h2 id="releases">🚢 Releases</h2>
 
-&nbsp; [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/core-grafana/tree/v1.0.0)
+&nbsp; [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/monitor-cadvisor/tree/v1.0.0)
 
 <br/>
 
 <h2 id="system-startup">🚀 System Startup</h2>
 
-- Create a new directory named `core`.
+- Create a new directory named `monitor`.
 
 ```
-mkdir core
-cd core
+mkdir monitor
+cd monitor
 ```
 
 - Clone project.
 
 ```
-git clone https://github.com/ahmettoguz/core-grafana
+git clone https://github.com/ahmettoguz/monitor-cadvisor
 ```
 
-- Create `.env` file based on the `.env.example` file with credentails.
+- Create `network-monitor` network if not exists.
 
 ```
-cp .env.example .env
-```
-
-- Check `provisioning` directory for further dashboard and datasource configuration.
-
-- Create `network-core` network if not exists.
-
-```
-docker network create network-core
+docker network create network-monitor
 ```
 
 - Run Container.
 
 ```
-docker stop                           core-cadvisor-c
-docker rm                             core-cadvisor-c
-docker compose -p core up --build -d  cadvisor
-docker compose -p core up -d          cadvisor
-docker logs -f                        core-cadvisor-c
+docker stop                             monitor-cadvisor-c
+docker rm                               monitor-cadvisor-c
+docker compose -p monitor up --build -d cadvisor
+docker compose -p monitor up -d         cadvisor
+docker logs -f                          monitor-cadvisor-c
 ```
 
 <br/>
