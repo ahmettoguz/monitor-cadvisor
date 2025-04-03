@@ -86,9 +86,11 @@ docker compose -p monitor up -d         cadvisor
 docker logs -f                          monitor-cadvisor-c
 ```
 
-- Refer to [`prometheus`](https://github.com/ahmettoguz/monitor-prometheus) repository to integrate prometheus to scrap data.
+- Refer to [`Node-Export`](https://github.com/ahmettoguz/monitor-node-export) repository to expose node metrics.
 
-- Refer to [`grafana`](https://github.com/ahmettoguz/monitor-grafana) repository to integrate grafana to visualize node exporter data.
+- Refer to [`Prometheus`](https://github.com/ahmettoguz/monitor-prometheus) repository to integrate prometheus to scrap data.
+
+- Refer to [`Grafana`](https://github.com/ahmettoguz/monitor-grafana) repository to integrate grafana to visualize node exporter data.
 
 <br/>
 
