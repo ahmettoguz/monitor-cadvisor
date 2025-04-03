@@ -2,7 +2,7 @@
 services:
   cadvisor:
     image: gcr.io/cadvisor/cadvisor
-    container_name: core-cadvisor-c
+    container_name: monitor-cadvisor-c
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:ro
@@ -10,14 +10,12 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
       - /dev/disk/:/dev/disk:ro
     networks:
-      - network-core
-    # restart: always
-    # env_file:
-    #   - ./.env
-    ports:
-      - "8080:8080"
+      - network-monitor
+    restart: always
+    # ports:
+    #   - "8080:8080"
 
 ####################################### Networks
 networks:
-  network-core:
+  network-monitor:
     external: true
