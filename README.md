@@ -26,7 +26,7 @@ Container Advisor (cAdvisor) is a tool designed to provide insights into contain
 
 <br/>
 
-<h2 id="dashboard">🔥 Dashboard</h2>
+<h2 id="dashboard">🦉 Dashboard</h2>
 
 <div align="center">
     <img width=800 src="assets/dashboard/dashboard.png">
