@@ -1,17 +1,17 @@
 ####################################### Services
 services:
-  cadvisor:
-    image: gcr.io/cadvisor/cadvisor
-    container_name: monitor-cadvisor-c
+  service-cadvisor:
+    image: ahmettoguz/cadvisor:v0.52.1
+    container_name: container-cadvisor
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:ro
       - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
-      - /dev/disk/:/dev/disk:ro
+      # - /var/lib/docker/:/var/lib/docker:ro
+      # - /dev/disk/:/dev/disk:ro
     networks:
       - network-monitor
-    restart: always
+    restart: ${RESTART_POLICY}
     # ports:
     #   - "8080:8080"
 
