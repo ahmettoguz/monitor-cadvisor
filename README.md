@@ -1,4 +1,4 @@
-<h1 id="top" align="center">Monitor cAdvisor <br/> 🚢 v1.1.0 🚢</h1>
+<h1 id="top" align="center">Monitor cAdvisor <br/> 🚢 v1.2.0 🚢</h1>
 
 <br>
 
@@ -13,8 +13,6 @@
 - [Features](#features)
 - [System Startup](#system-startup)
 
-&nbsp; [![.Env](https://img.shields.io/badge/.ENV-ECD53F.svg?style=for-the-badge&logo=dotenv&logoColor=black)](https://www.ibm.com/docs/bg/aix/7.2?topic=files-env-file)
-
 <br/>
 
 <h2 id="features">🔥 Features</h2>
@@ -22,16 +20,6 @@
 - **Docker Compose Deployment:** Simplifies deployment with Docker Compose configuration, enabling easy setup and service orchestration without complex commands.
 - **.env Configuration:** All environment variables are easily configurable using the `.env` file, simplifying configuration management.
 - **Network Setup:** Integrates cAdvisor with other metric tool networks.
-
-<br/>
-
-<h2 id="releases">🚢 Releases</h2>
-
-&nbsp; [![.](https://img.shields.io/badge/1.2.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/monitor-cadvisor/tree/v1.2.0)
-
-&nbsp; [![.](https://img.shields.io/badge/1.1.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/monitor-cadvisor/tree/v1.1.0)
-
-&nbsp; [![.](https://img.shields.io/badge/1.0.0-233838?style=flat&label=version&labelColor=111727&color=1181A1)](https://github.com/ahmettoguz/monitor-cadvisor/tree/v1.0.0)
 
 <br/>
 
