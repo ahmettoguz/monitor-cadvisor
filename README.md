@@ -1,4 +1,4 @@
-<h1 id="top" align="center">Monitor cAdvisor <br/> 🚢 v1.2.0 🚢</h1>
+<h1 id="top" align="center">Monitor cAdvisor <br/> 🚢 v1.2.1 🚢</h1>
 
 <br>
 
